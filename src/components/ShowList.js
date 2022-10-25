@@ -72,7 +72,7 @@ const ShowList = (props) => {
     console.log("on load useeffect");
     async function fetchData() {
       try {
-        const { data } = await axios.get(`http://api.tvmaze.com/shows`);
+        const { data } = await axios.get(`https://api.tvmaze.com/shows`);
         setShowsData(data);
         setLoading(false);
       } catch (e) {
@@ -89,7 +89,7 @@ const ShowList = (props) => {
       try {
         console.log(`in fetch searchTerm: ${searchTerm}`);
         const { data } = await axios.get(
-          "http://api.tvmaze.com/search/shows?q=" + searchTerm
+          "https://api.tvmaze.com/search/shows?q=" + searchTerm
         );
         setSearchData(data);
         setLoading(false);

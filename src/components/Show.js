@@ -71,7 +71,7 @@ const Show = (props) => {
     async function fetchData() {
       try {
         const { data: show } = await axios.get(
-          `http://api.tvmaze.com/shows/${id}`
+          `https://api.tvmaze.com/shows/${id}`
         );
         setShowData(show);
         setLoading(false);
